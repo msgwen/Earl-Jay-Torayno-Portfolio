@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The personal portfolio of Earl Jay G. Torayno, a Computer Science graduate and aspiring software and game developer from the Philippines." />
+  <meta name="theme-color" content="#050816" />
+  <meta property="og:title" content="Earl Jay G. Torayno | Software Developer Portfolio" />
+  <meta property="og:description" content="The personal portfolio of Earl Jay G. Torayno, a Computer Science graduate and aspiring software and game developer from the Philippines." />
+  <meta property="og:type" content="website" />
+  <title>Earl Jay G. Torayno | Software Developer Portfolio</title>
+  <script>
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('has-js');
+    document.documentElement.classList.add('preload');
+    window.setTimeout(() => {
+      if (!document.documentElement.classList.contains('app-ready')) {
+        document.documentElement.classList.add('fallback-visible');
+      }
+      document.documentElement.classList.remove('preload');
+    }, 3500);
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Space Grotesk', 'Segoe UI', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              bg: '#04111f',
+              panel: '#08263a',
+              accent: '#66d9ff',
+              accent2: '#4ed6c6',
+              gold: '#f0db9a',
+            },
+          },
+          boxShadow: {
+            glow: '0 26px 90px rgba(0, 20, 32, 0.34)',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body class="min-h-screen overflow-x-hidden bg-[#04111f] text-slate-50 antialiased selection:bg-sky-400/30">
+  <div class="ocean-surface" aria-hidden="true">
+    <span class="ocean-surface__glow"></span>
+    <span class="ocean-surface__sunrays">
+      <span class="ocean-surface__ray ocean-surface__ray--1"></span>
+      <span class="ocean-surface__ray ocean-surface__ray--2"></span>
+      <span class="ocean-surface__ray ocean-surface__ray--3"></span>
+      <span class="ocean-surface__ray ocean-surface__ray--4"></span>
+      <span class="ocean-surface__ray ocean-surface__ray--5"></span>
+      <span class="ocean-surface__ray ocean-surface__ray--6"></span>
+      <span class="ocean-surface__ray ocean-surface__ray--7"></span>
+    </span>
+  </div>
+  <div class="progress-bar" aria-hidden="true"><span class="progress-bar__fill"></span></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <div class="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <img class="loader__logo" src="assets/icons/logo.png" alt="Ej" /> 
+    </div>
+    <p>Loading portfolio</p>
+    <div class="loader__wave">
+      <div class="loader__wave-inner">
+        <span class="wave wave--one"></span>
+        <span class="wave wave--two"></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav mx-auto flex w-[min(1260px,calc(100vw-1.25rem))] items-center justify-between rounded-[22px] border border-white/5 bg-slate-950/20 px-4 py-3 backdrop-blur-md">
+      <a class="brand" href="#home" aria-label="Earl Jay G. Torayno home">
+        <img class="loader__logo" src="assets/icons/logo.png" alt="Ej"/> 
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <a href="#home" class="nav__link is-active">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#education" class="nav__link">Education</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="hero section" id="home" data-ocean-depth="shallow">
+      <div class="hero__backdrop" aria-hidden="true">
+        <span class="orb orb--one"></span>
+        <span class="orb orb--two"></span>
+        <span class="orb orb--three"></span>
+        <span class="grid-overlay"></span>
+      </div>
+      <div class="hero__content container mx-auto w-[min(1160px,calc(100vw-2rem))] rounded-[42px] border border-white/5 bg-slate-950/10 px-4 py-6 shadow-[0_30px_90px_rgba(0,0,0,0.14)] backdrop-blur-sm lg:px-8">
+        <div class="hero__copy reveal-group">
+          <p class="eyebrow reveal">Hello, I'm</p>
+          <h1 class="hero__title reveal text-[clamp(3.4rem,8vw,7rem)] font-bold leading-[0.9] tracking-[-0.05em]">
+            <span class="hero__line block">Earl Jay</span>
+            <span class="hero__line block">G. Torayno</span>
+          </h1>
+          <div class="hero__roles" aria-live="polite">
+            <span class="hero__role-label">Computer Science Graduate</span>
+            <span class="hero__role-label hero__role-label--accent" data-role-output>Software Developer</span>
+          </div>
+          <p class="hero__description reveal max-w-[55ch] text-base text-slate-200/80 md:text-lg">
+            I build practical digital solutions, interactive applications, and meaningful user experiences through technology.
+          </p>
+          <div class="hero__actions reveal flex flex-wrap gap-3">
+            <a class="btn btn--primary magnetic" href="#projects">View My Work</a>
+            <a class="btn btn--ghost magnetic" href="#contact">Contact Me</a>
+          </div>
+          <div class="hero__socials reveal" aria-label="Social links">
+            <a href="https://github.com/msgwen" target="_blank" rel="noreferrer" aria-label="GitHub"><svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">GH</text></svg></a>
+            <a href="https://www.linkedin.com/in/earl-jay-torayno-533763358/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">in</text></svg></a>
+            <a href="https://www.facebook.com/earl.torayno.12" target="_blank" rel="noreferrer" aria-label="Facebook"><svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">f</text></svg></a>
+            <a href="mailto:toraynoearljay06@gmail.com" aria-label="Email"><svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">@</text></svg></a>
+          </div>
+        </div>
+        <aside class="hero__panel reveal" aria-label="Portfolio highlights">
+          <div class="hero__panel-card glass">
+            <p class="hero__panel-kicker">Selected focus</p>
+            <ul class="hero__focus-list">
+              <li>Software systems that solve real problems</li>
+              <li>Interactive experiences with clean UX</li>
+              <li>Game development exploration and growth</li>
+            </ul>
+          </div>
+          <div class="hero__panel-card hero__panel-card--stats glass">
+            <div>
+              <strong>2026</strong>
+              <span>Graduate year</span>
+            </div>
+            <div>
+              <strong>Philippines</strong>
+              <span>Based in</span>
+            </div>
+            <div>
+              <strong>CS</strong>
+              <span>Background</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+        <span>Scroll</span>
+        <span class="scroll-indicator__line"></span>
+      </a>
+    </section>
+
+    <section class="section about" id="about" data-ocean-depth="mid">
+      <div class="container section__grid section__grid--about mx-auto w-[min(1160px,calc(100vw-2rem))]">
+        <div class="section__heading reveal max-w-[760px] mb-8">
+          <p class="eyebrow">About Me</p>
+          <h2 class="text-[clamp(2rem,5vw,4rem)] font-bold leading-[0.96] tracking-[-0.05em] text-white">Professional, curious, and focused on building useful digital experiences.</h2>
+        </div>
+        <div class="about__sticky glass reveal rounded-[2rem] p-5 md:p-6">
+          <div class="portrait" aria-hidden="true">
+            <img class="portrait__image" src="assets/images/about/AboutMe.png" alt="Earl Jay G. Torayno portrait" />
+          </div>
+          <div class="about__summary">
+            <p>I am a Computer Science graduate who enjoys building systems that solve real-world problems.</p>
+            <p>My experience includes web development, database-driven applications, Java programming, UI design, and creating software solutions for businesses and communities.</p>
+            <p>I am especially interested in software development, game development, interactive experiences, and turning ideas into useful digital products.</p>
+          </div>
+        </div>
+        <div class="about__story grid gap-4 sm:grid-cols-2">
+          <article class="stat-card reveal glass rounded-[1.75rem] p-5" data-count="1">
+            <span class="stat-card__value block text-4xl font-bold tracking-[-0.04em] text-white" data-counter="1">0</span>
+            <span class="stat-card__label mt-2 block text-sm text-slate-200/75">Computer Science Graduate</span>
+          </article>
+          <article class="stat-card reveal glass rounded-[1.75rem] p-5" data-count="2">
+            <span class="stat-card__value block text-4xl font-bold tracking-[-0.04em] text-white" data-counter="2">0</span>
+            <span class="stat-card__label mt-2 block text-sm text-slate-200/75">Cum Laude</span>
+          </article>
+          <article class="stat-card reveal glass rounded-[1.75rem] p-5" data-count="3">
+            <span class="stat-card__value block text-4xl font-bold tracking-[-0.04em] text-white" data-counter="3">0</span>
+            <span class="stat-card__label mt-2 block text-sm text-slate-200/75">Multiple Software Projects</span>
+          </article>
+          <article class="stat-card reveal glass rounded-[1.75rem] p-5" data-count="4">
+            <span class="stat-card__value block text-4xl font-bold tracking-[-0.04em] text-white" data-counter="4">0</span>
+            <span class="stat-card__label mt-2 block text-sm text-slate-200/75">Based in the Philippines</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills" data-ocean-depth="mid">
+      <div class="container mx-auto w-[min(1160px,calc(100vw-2rem))]">
+        <div class="section__heading reveal max-w-[760px] mb-8">
+          <p class="eyebrow">Skills and Technologies</p>
+          <h2 class="text-[clamp(2rem,5vw,4rem)] font-bold leading-[0.96] tracking-[-0.05em] text-white">Practical tools and technologies I use to build reliable products.</h2>
+        </div>
+        <div class="skills__grid grid gap-5 md:grid-cols-2">
+          <article class="skill-group glass reveal rounded-[2rem] p-6" data-group="Frontend">
+            <h3 class="mb-4 flex items-center text-2xl font-semibold text-white"><svg class="site-icon site-icon--inline" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">UI</text></svg> Frontend</h3>
+            <div class="skill-pills flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">HTML </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">CSS </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">JavaScript </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Responsive Design </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">UI/UX Design </span>
+            </div>
+          </article>
+          <article class="skill-group glass reveal rounded-[2rem] p-6" data-group="Backend and Database">
+            <h3 class="mb-4 flex items-center text-2xl font-semibold text-white"><svg class="site-icon site-icon--inline" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">DB</text></svg> Backend and Database</h3>
+            <div class="skill-pills flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Firebase </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">MySQL </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Prisma</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">REST APIs</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Database Design </span>
+            </div>
+          </article>
+          <article class="skill-group glass reveal rounded-[2rem] p-6" data-group="Programming">
+            <h3 class="mb-4 flex items-center text-2xl font-semibold text-white"><svg class="site-icon site-icon--inline" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">&lt;/&gt;</text></svg> Programming</h3>
+            <div class="skill-pills flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Java </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">C </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">JavaScript </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">PHP </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">SQL </span>
+            </div>
+          </article>
+          <article class="skill-group glass reveal rounded-[2rem] p-6" data-group="Tools">
+            <h3 class="mb-4 flex items-center text-2xl font-semibold text-white"><svg class="site-icon site-icon--inline" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">⚙</text></svg> Tools</h3>
+            <div class="skill-pills flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Visual Studio Code </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Git </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">GitHub</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Figma</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Roblox Studio </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects" data-ocean-depth="deep">
+      <div class="container mx-auto w-[min(1160px,calc(100vw-2rem))]">
+        <div class="section__heading reveal max-w-[760px] mb-8">
+          <p class="eyebrow">Featured Projects</p>
+          <h2 class="text-[clamp(2rem,5vw,4rem)] font-bold leading-[0.96] tracking-[-0.05em] text-white">Case studies that combine problem solving, systems thinking, and polished execution.</h2>
+        </div>
+        <div class="filter-bar reveal mb-6 flex flex-wrap gap-3" role="tablist" aria-label="Project filters">
+          <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+          <button class="filter-chip" type="button" data-filter="web">Web</button>
+          <button class="filter-chip" type="button" data-filter="backend">Backend</button>
+          <button class="filter-chip" type="button" data-filter="java">Java</button>
+          <button class="filter-chip" type="button" data-filter="business">Business</button>
+        </div>
+        <div class="project-carousel" data-project-carousel>
+          <div class="project-carousel__viewport">
+            <div class="project-list">
+          <article class="project-card glass reveal" data-category="web backend business" data-project="Fish Farm Management System">
+            <div class="project-card__media project-card__media--a project-card__media--image">
+              <img class="project-card__image" src="assets/images/projects/fishFarmmanagementSystem.PNG" alt="Fish Farm Management System dashboard screenshot" loading="lazy" decoding="async" />
+              <span>Fish Farm Management System</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-status">In Progress</span>
+                <span>Real-time database</span>
+              </div>
+              <h3>Fish Farm Management System</h3>
+              <p>A real-time management system for recording fish cages, feeds, mortality, inventory, expenses, employees, and daily reports.</p>
+              <ul class="project-card__list">
+                <li><strong>Problem:</strong> Manual tracking caused delays and data duplication.</li>
+                <li><strong>My role:</strong> Design, implementation, and data flow planning.</li>
+                <li><strong>Stack:</strong> Firebase, JavaScript, HTML, CSS, real-time database.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tech-badge">Firebase</span><span class="tech-badge">JavaScript</span><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span>
+              </div>
+              <div class="project-card__actions">
+                <button class="btn btn--primary btn--sm project-action" type="button" data-action="project">View Project</button>
+                <button class="btn btn--ghost btn--sm project-action" type="button" data-action="code">View Code</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" data-category="web backend" data-project="Point of Sale and Order Management System">
+            <div class="project-card__media project-card__media--b" aria-hidden="true">
+              <span>POS and Order Management</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-status">Completed</span>
+                <span>Business operations</span>
+              </div>
+              <h3>Point of Sale and Order Management System</h3>
+              <p>A business system for managing products, customer orders, order items, payments, and administrative operations.</p>
+              <ul class="project-card__list">
+                <li><strong>Problem:</strong> Needed a cleaner flow for orders and payment tracking.</li>
+                <li><strong>My role:</strong> Backend structure, database logic, and interface development.</li>
+                <li><strong>Stack:</strong> JavaScript, Prisma, MySQL, REST API.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tech-badge">JavaScript</span><span class="tech-badge">Prisma</span><span class="tech-badge">MySQL</span><span class="tech-badge">REST API</span>
+              </div>
+              <div class="project-card__actions">
+                <button class="btn btn--primary btn--sm project-action" type="button" data-action="project">View Project</button>
+                <button class="btn btn--ghost btn--sm project-action" type="button" data-action="code">View Code</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" data-category="java" data-project="Airport Boarding Management System">
+            <div class="project-card__media project-card__media--c" aria-hidden="true">
+              <span>Airport Boarding Management</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-status">Archived</span>
+                <span>Desktop application</span>
+              </div>
+              <h3>Airport Boarding Management System</h3>
+              <p>A Java application for organizing passenger boarding, seat assignment, passenger prioritization, and file-based record management.</p>
+              <ul class="project-card__list">
+                <li><strong>Problem:</strong> Required a simple way to sort and process boarding records.</li>
+                <li><strong>My role:</strong> Application design, queues, file handling, and UI implementation.</li>
+                <li><strong>Stack:</strong> Java, Swing, file handling, priority queues.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tech-badge">Java</span><span class="tech-badge">Swing</span><span class="tech-badge">File Handling</span><span class="tech-badge">Priority Queues</span>
+              </div>
+              <div class="project-card__actions">
+                <button class="btn btn--primary btn--sm project-action" type="button" data-action="project">View Project</button>
+                <button class="btn btn--ghost btn--sm project-action" type="button" data-action="code">View Code</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" data-category="business web" data-project="Business and E-Commerce Projects">
+            <div class="project-card__media project-card__media--d" aria-hidden="true">
+              <span>Business and E-Commerce</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-status">Ongoing</span>
+                <span>Client-ready systems</span>
+              </div>
+              <h3>Business and E-Commerce Projects</h3>
+              <p>Web-based solutions for product presentation, order handling, engraving services, and business management.</p>
+              <ul class="project-card__list">
+                <li><strong>Problem:</strong> Small businesses needed practical digital workflows.</li>
+                <li><strong>My role:</strong> Interface design, product workflow, and deployment preparation.</li>
+                <li><strong>Stack:</strong> HTML, CSS, JavaScript, database services, business logic.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Business Systems</span>
+              </div>
+              <div class="project-card__actions">
+                <button class="btn btn--primary btn--sm project-action" type="button" data-action="project">View Project</button>
+                <button class="btn btn--ghost btn--sm project-action" type="button" data-action="code">View Code</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" data-category="java" data-project="WasteBound">
+            <div class="project-card__media project-card__media--c" aria-hidden="true">
+              <img class="project-card__image" src="assets/images/projects/Wastebound.png" alt="WasteBound game screenshot" loading="lazy" decoding="async" />
+              <span>WasteBound</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-status">Archived</span>
+                <span>Web Game</span>
+              </div>
+              <h3>WasteBound</h3>
+              <p>A Java-based web game for managing waste disposal and recycling processes.</p>
+              <ul class="project-card__list">
+                <li><strong>Problem:</strong> Needed a fun and interactive way to educate users about waste management.</li>
+                <li><strong>My role:</strong> Application design, Physics simulation, Storyboard, and UI implementation.</li>
+                <li><strong>Stack:</strong> Javascript, Typescript, Tailwind, REACT, Node.js, MySQL.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tech-badge">Javascript</span><span class="tech-badge">Typescript</span><span class="tech-badge">Tailwind</span><span class="tech-badge">REACT</span><span class="tech-badge">Node.js</span><span class="tech-badge">MySQL</span>
+              </div>
+              <div class="project-card__actions">
+                <button class="btn btn--primary btn--sm project-action" type="button" data-action="project">View Project</button>
+                <button class="btn btn--ghost btn--sm project-action" type="button" data-action="code">View Code</button>
+              </div>
+            </div>
+          </article>
+            </div>
+          </div>
+          <div class="project-carousel__controls">
+            <button class="project-carousel__button" type="button" data-project-previous aria-label="Previous project">
+              <svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+            </button>
+            <span class="project-carousel__status" data-project-status aria-live="polite">1 / 4</span>
+            <button class="project-carousel__button" type="button" data-project-next aria-label="Next project">
+              <svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" /></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ojectience" id="experience" data-ocean-depth="deep">
+      <div class="container mx-auto w-[min(1160px,calc(100vw-2rem))]">
+        <div class="section__heading reveal max-w-[760px] mb-8">
+          <p class="eyebrow">Experience and Journey</p>
+          <h2 class="text-[clamp(2rem,5vw,4rem)] font-bold leading-[0.96] tracking-[-0.05em] text-white">A timeline of learning, building, and steadily moving toward stronger professional work.</h2>
+        </div>
+        <div class="timeline relative">
+          <div class="timeline__line" aria-hidden="true"><span></span></div>
+          <article class="timeline__item glass reveal">
+            <span class="timeline__dot"></span>
+            <p class="timeline__date">Education</p>
+            <h3>Computer Science foundation</h3>
+            <p>Built a strong base in programming, systems analysis, software design, and collaborative project work.</p>
+          </article>
+          <article class="timeline__item glass reveal">
+            <span class="timeline__dot"></span>
+            <p class="timeline__date">Academic Projects</p>
+            <h3>Multiple software builds</h3>
+            <p>Developed systems for management, records, inventory, and user-focused interfaces across different technologies.</p>
+          </article>
+          <article class="timeline__item glass reveal">
+            <span class="timeline__dot"></span>
+            <p class="timeline__date">Client Work</p>
+            <h3>Business and collaboration projects</h3>
+            <p>Worked on practical solutions that support operations, presentations, and everyday digital workflows.</p>
+          </article>
+          <article class="timeline__item glass reveal">
+            <span class="timeline__dot"></span>
+            <p class="timeline__date">Growth Area</p>
+            <h3>Roblox tutoring and game development learning</h3>
+            <p>Continued exploring interactive development and game creation while improving technical depth and creativity.</p>
+          </article>
+          <article class="timeline__item glass reveal">
+            <span class="timeline__dot"></span>
+            <p class="timeline__date">Current Direction</p>
+            <h3>Preparing for professional opportunities</h3>
+            <p>Focusing on software development roles, freelance systems work, and meaningful collaborations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education" id="education" data-ocean-depth="trench">
+      <div class="container mx-auto w-[min(1160px,calc(100vw-2rem))]">
+        <div class="section__heading reveal max-w-[760px] mb-8">
+          <p class="eyebrow">Education and Achievements</p>
+          <h2 class="text-[clamp(2rem,5vw,4rem)] font-bold leading-[0.96] tracking-[-0.05em] text-white">Academic milestones that shaped my approach to building thoughtful software.</h2>
+        </div>
+        <div class="education__layout grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <article class="achievement-card glass reveal">
+            <span class="achievement-card__badge">Cum Laude</span>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p>South Philippine Adventist College</p>
+            <div class="achievement-card__details">
+              <div>
+                <strong>Class of 2026</strong>
+                <span>Academic standing</span>
+              </div>
+              <div>
+                <strong>Gold-accent focus</strong>
+                <span>Achievement highlight</span>
+              </div>
+            </div>
+          </article>
+          <div class="education__stack">
+            <article class="mini-card glass reveal">
+              <h3>Awards</h3>
+              <p>Placeholder for awards and recognition.</p>
+            </article>
+            <article class="mini-card glass reveal">
+              <h3>Certifications</h3>
+              <p>Placeholder for certificates and technical courses.</p>
+            </article>
+            <article class="mini-card glass reveal">
+              <h3>Seminars</h3>
+              <p>Placeholder for seminars, workshops, and talks.</p>
+            </article>
+            <article class="mini-card glass reveal">
+              <h3>Academic Achievements</h3>
+              <p>Placeholder for other notable school accomplishments.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section values" id="values" data-ocean-depth="trench">
+      <div class="container mx-auto w-[min(1160px,calc(100vw-2rem))]">
+        <div class="section__heading reveal max-w-[760px] mb-8">
+          <p class="eyebrow">Personal Values</p>
+          <h2 class="text-[clamp(2rem,5vw,4rem)] font-bold leading-[0.96] tracking-[-0.05em] text-white">The principles that shape how I learn, build, and work with others.</h2>
+        </div>
+        <div class="values__grid grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <article class="value-card glass reveal rounded-[1.75rem] p-5"><h3 class="mb-3 text-2xl font-semibold text-white">Faith</h3><p class="text-slate-200/80">A steady personal foundation that informs perspective and gratitude.</p></article>
+          <article class="value-card glass reveal rounded-[1.75rem] p-5"><h3 class="mb-3 text-2xl font-semibold text-white">Integrity</h3><p class="text-slate-200/80">Doing careful, honest work that people can trust.</p></article>
+          <article class="value-card glass reveal rounded-[1.75rem] p-5"><h3 class="mb-3 text-2xl font-semibold text-white">Continuous Learning</h3><p class="text-slate-200/80">Staying curious and improving through every project.</p></article>
+          <article class="value-card glass reveal rounded-[1.75rem] p-5"><h3 class="mb-3 text-2xl font-semibold text-white">Creativity</h3><p class="text-slate-200/80">Turning ideas into thoughtful and useful experiences.</p></article>
+          <article class="value-card glass reveal rounded-[1.75rem] p-5"><h3 class="mb-3 text-2xl font-semibold text-white">Service</h3><p class="text-slate-200/80">Building with the goal of helping people and communities.</p></article>
+          <article class="value-card glass reveal rounded-[1.75rem] p-5"><h3 class="mb-3 text-2xl font-semibold text-white">Responsibility</h3><p class="text-slate-200/80">Following through with care, clarity, and accountability.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" data-ocean-depth="mid">
+      <div class="container contact__grid mx-auto w-[min(1160px,calc(100vw-2rem))]">
+        <div class="section__heading reveal max-w-[760px] mb-8">
+          <p class="eyebrow">Contact</p>
+          <h2 class="text-[clamp(2rem,5vw,4rem)] font-bold leading-[0.96] tracking-[-0.05em] text-white">Let’s build something meaningful.</h2>
+          <p class="section__lede text-base text-slate-200/75 md:text-lg">I am open to software development opportunities, freelance projects, collaborations, and conversations about technology.</p>
+        </div>
+        <div class="contact__panel glass reveal rounded-[2rem] p-5 md:p-6">
+          <form class="contact-form" novalidate>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required placeholder="Your name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required placeholder="you@example.com" />
+            </label>
+            <label>
+              <span>Subject</span>
+              <input type="text" name="subject" required placeholder="Project inquiry" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required placeholder="Tell me about your idea or opportunity."></textarea>
+            </label>
+            <button class="btn btn--primary magnetic" type="submit">Send Message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <aside class="contact__info grid gap-4">
+          <article class="contact-card glass reveal rounded-[1.75rem] p-5">
+            <span class="text-xs uppercase tracking-[0.2em] text-slate-200/60">Email</span>
+            <strong class="mt-2 block text-lg font-semibold text-white">toraynoearljay@gmail.com</strong>
+          </article>
+          <article class="contact-card glass reveal rounded-[1.75rem] p-5">
+            <span class="text-xs uppercase tracking-[0.2em] text-slate-200/60">Location</span>
+            <strong class="mt-2 block text-lg font-semibold text-white">Philippines</strong>
+          </article>
+          <article class="contact-card glass reveal rounded-[1.75rem] p-5">
+            <span class="text-xs uppercase tracking-[0.2em] text-slate-200/60">Availability</span>
+            <strong class="mt-2 block text-lg font-semibold text-white">Open for opportunities</strong>
+          </article>
+          <article class="contact-card glass reveal rounded-[1.75rem] p-5">
+            <span class="text-xs uppercase tracking-[0.2em] text-slate-200/60">Social Links</span>
+            <div class="contact-card__socials mt-3 flex flex-wrap gap-2">
+              <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-white hover:bg-white/10" href="https://github.com/msgwen" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-white hover:bg-white/10" href="https://www.linkedin.com/in/earl-jay-torayno-533763358/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-white hover:bg-white/10" href="https://www.facebook.com/earl.torayno.12" target="_blank" rel="noreferrer">Facebook</a>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>Designed and developed by Earl Jay G. Torayno</p>
+      <span class="footer__year">© <span data-year></span></span>
+      <div class="footer__links">
+        <a href="https://github.com/msgwen" target="_blank" rel="noreferrer" aria-label="GitHub"><svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">GH</text></svg></a>
+        <a href="https://www.linkedin.com/in/earl-jay-torayno-533763358/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">in</text></svg></a>
+        <a href="#home" class="back-to-top" aria-label="Back to top"><svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">↑</text></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog glass" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" type="button" aria-label="Close dialog" data-close-modal>
+        <svg class="site-icon site-icon--inline" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle">×</text></svg>
+      </button>
+      <p class="modal__eyebrow" data-modal-eyebrow>Project details</p>
+      <h3 id="modal-title" data-modal-title>Project title</h3>
+      <p data-modal-summary></p>
+      <ul class="modal__list" data-modal-list></ul>
+      <div class="modal__actions">
+        <a class="btn btn--primary btn--sm" href="#contact" data-modal-primary>Request a demo</a>
+        <a class="btn btn--ghost btn--sm" href="#contact" data-modal-secondary>Discuss code</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite" hidden></div>
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <text id="icon-github" x="12" y="16" text-anchor="middle">GH</text>
+    <text id="icon-linkedin" x="12" y="16" text-anchor="middle">in</text>
+    <text id="icon-facebook" x="12" y="16" text-anchor="middle">f</text>
+    <text id="icon-mail" x="12" y="16" text-anchor="middle">@</text>
+    <text id="icon-ui" x="12" y="16" text-anchor="middle">UI</text>
+    <text id="icon-db" x="12" y="16" text-anchor="middle">DB</text>
+    <text id="icon-code" x="12" y="16" text-anchor="middle">&lt;/&gt;</text>
+    <text id="icon-tools" x="12" y="16" text-anchor="middle">⚙</text>
+    <text id="icon-up" x="12" y="16" text-anchor="middle">↑</text>
+  </svg>
+  <noscript>
+    <style>
+      .loader, .cursor, .cursor-glow, .progress-bar, .nav__toggle { display: none !important; }
+      .nav__menu { position: static; transform: none; opacity: 1; pointer-events: auto; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+</body>
+</html>
